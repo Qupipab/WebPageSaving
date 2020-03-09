@@ -12,6 +12,7 @@ namespace WebPageSaving
 
             string[] commandsArr = Console.ReadLine().Split(new char[] { ' ' });
             string command = commandsArr[0];
+            if (commandsArr[1].Contains("http://")) commandsArr[1] = commandsArr[1].Substring(7);
             string siteName = commandsArr[1].Split('/')[0];
             string sitePath = commandsArr[1];
 
