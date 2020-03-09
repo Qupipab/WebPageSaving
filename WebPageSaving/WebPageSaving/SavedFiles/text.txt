@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Server: nginx/1.10.3 (Ubuntu)
+Date: Mon, 09 Mar 2020 17:16:32 GMT
+Content-Type: text/plain
+Content-Length: 45
+Connection: close
+Last-Modified: Sat, 07 Mar 2020 22:13:46 GMT
+Accept-Ranges: bytes
+
+here is some text, which should be downloaded
