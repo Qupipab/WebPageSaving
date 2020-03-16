@@ -42,9 +42,9 @@ namespace WebPageSaving
                     stream.Close();
                     client.Close();
 
-                    if (responseMessage.IndexOf("\n\r", StringComparison.OrdinalIgnoreCase) > -1)
+                    if (responseMessage.IndexOf("\n\r\n\r", StringComparison.OrdinalIgnoreCase) > -1)
                     {
-                        int searchIndex = responseMessage.IndexOf("\n\r", StringComparison.OrdinalIgnoreCase) + 3;
+                        int searchIndex = responseMessage.IndexOf("\n\r", StringComparison.OrdinalIgnoreCase);
                         responseMessage = responseMessage.Substring(searchIndex);
                     }
 
