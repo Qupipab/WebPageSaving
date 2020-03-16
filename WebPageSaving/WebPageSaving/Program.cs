@@ -44,7 +44,7 @@ namespace WebPageSaving
 
                     if (responseMessage.IndexOf("\n\r\n\r", StringComparison.OrdinalIgnoreCase) > -1)
                     {
-                        int searchIndex = responseMessage.IndexOf("\n\r", StringComparison.OrdinalIgnoreCase);
+                        int searchIndex = responseMessage.IndexOf("\n\r\n\r", StringComparison.OrdinalIgnoreCase);
                         responseMessage = responseMessage.Substring(searchIndex);
                     }
 
