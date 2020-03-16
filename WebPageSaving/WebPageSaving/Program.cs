@@ -42,14 +42,9 @@ namespace WebPageSaving
                     stream.Close();
                     client.Close();
 
-                    if (responseMessage.IndexOf("<html>", StringComparison.OrdinalIgnoreCase) > -1)
+                    if (responseMessage.IndexOf("\n\r", StringComparison.OrdinalIgnoreCase) > -1)
                     {
-                        int searchIndex = responseMessage.IndexOf("<html>", StringComparison.OrdinalIgnoreCase);
-                        responseMessage = responseMessage.Substring(searchIndex);
-                    }
-                    else if (responseMessage.IndexOf("<header>", StringComparison.OrdinalIgnoreCase) > -1)
-                    {
-                        int searchIndex = responseMessage.IndexOf("<header>", StringComparison.OrdinalIgnoreCase);
+                        int searchIndex = responseMessage.IndexOf("\n\r", StringComparison.OrdinalIgnoreCase) + 2;
                         responseMessage = responseMessage.Substring(searchIndex);
                     }
 
